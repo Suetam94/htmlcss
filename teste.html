@@ -1,0 +1,33 @@
+<script>
+    function gradingStudents() {
+
+        let grades = [
+            4,
+            73,
+            67,
+            38,
+            33,
+        ];
+        // Write your code here
+        for(let i = 1; i <= grades[0]; i++) {
+            if(grades[i] % 5 === 0) {
+                grades[i] = grades[i];
+            } else {
+                let q = (Math.trunc(grades[i] / 5) + 1) * 5;
+                if (q >= 40) {
+                    let s = q - grades[i];
+
+                    if (s < 3) {
+                        grades[i] = q;
+                    }
+                }
+            }
+        }
+
+        return grades;
+    }
+
+    console.log(gradingStudents());
+
+
+</script>
